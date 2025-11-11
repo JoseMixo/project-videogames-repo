@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=3 uid="uid://cep23p2hrlonq"]
+
+[ext_resource type="Texture2D" uid="uid://d0rc5da1ov4dv" path="res://imagenes/portada_defi_2(1).png" id="1_fks4s"]
+[ext_resource type="Script" uid="uid://dj22ndnrgjnfq" path="res://Scenes/creditos_me.gd" id="1_tw0ri"]
+[ext_resource type="Texture2D" uid="uid://cf72asjbko3nh" path="res://imagenes/creditos_3.png" id="2_fks4s"]
+[ext_resource type="Texture2D" uid="uid://bmya0wyp5krx6" path="res://imagenes/español_nue/buton_salir.png" id="4_tw0ri"]
+
+[sub_resource type="FontVariation" id="FontVariation_fks4s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aa1pu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tw0ri"]
+
+[node name="creditos_me" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tw0ri")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.47700003
+anchor_top = 0.41200003
+anchor_right = 0.545
+anchor_bottom = 0.47500002
+offset_left = -549.504
+offset_top = -266.976
+offset_right = 524.16
+offset_bottom = 340.19998
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+
+[node name="image" type="TextureRect" parent="CanvasLayer/PanelContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.95
+texture = ExtResource("1_fks4s")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/GridContainer/image"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.53900003
+anchor_top = 0.363
+anchor_right = 0.53900003
+anchor_bottom = 0.363
+offset_left = -301.92804
+offset_top = -70.224
+offset_right = 297.07196
+offset_bottom = 79.776
+texture = ExtResource("2_fks4s")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer/GridContainer/image/TextureRect"]
+modulate = Color(1, 1, 0.74509805, 1)
+self_modulate = Color(0.9882353, 0.9254902, 0.77254903, 1)
+texture_filter = 5
+texture_repeat = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.46100003
+anchor_top = 0.5
+anchor_right = 0.46100003
+anchor_bottom = 0.5
+offset_left = -265.139
+offset_top = -75.0
+offset_right = 312.861
+offset_bottom = 60.0
+theme_override_fonts/bold_font = SubResource("FontVariation_fks4s")
+theme_override_styles/normal = SubResource("StyleBoxTexture_aa1pu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tw0ri")
+text = "						Echo por:
+							Jonathan Emmanuel Nieto Macías
+							Pablo Isai Sanchez Valderrama
+							Miguel Angel Ramirez Farias
+							Jose manuel Cordova Santos"
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer/GridContainer/image"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.517
+anchor_top = 0.79300004
+anchor_right = 0.517
+anchor_bottom = 0.79300004
+offset_left = -103.584045
+offset_top = -76.86401
+offset_right = 104.415955
+offset_bottom = 14.135986
+grow_horizontal = 2
+grow_vertical = 0
+icon = ExtResource("4_tw0ri")
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/PanelContainer/GridContainer/image/Button" to="." method="_on_button_pressed"]

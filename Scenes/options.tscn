@@ -1,0 +1,141 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8p6kt54bubj"]
+
+[ext_resource type="Script" uid="uid://dgmana5jwj4uw" path="res://Scripts/options.gd" id="1_4tmxy"]
+[ext_resource type="Texture2D" uid="uid://buenpwn63lb1w" path="res://imagenes/prueba_3_w_pue.jpg" id="2_4tmxy"]
+[ext_resource type="Texture2D" uid="uid://dfrbnnuk1mqc6" path="res://imagenes/terminos_condi.png" id="3_kftxf"]
+[ext_resource type="Texture2D" uid="uid://c76inrdqp4aq3" path="res://imagenes/creditos_naranja.png" id="4_663nc"]
+[ext_resource type="Texture2D" uid="uid://bmya0wyp5krx6" path="res://imagenes/español_nue/buton_salir.png" id="5_kftxf"]
+[ext_resource type="FontFile" uid="uid://droxmli3wsahx" path="res://resourse_letras/CFMexicanaPERSONALUSE-Regul.ttf" id="6_663nc"]
+
+[node name="Option" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4tmxy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.15780687, 0.16006127, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4tmxy")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.25
+offset_top = -78.0
+offset_right = 152.25
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="contrato" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.031000001
+anchor_top = 0.9480001
+anchor_right = 0.031000001
+anchor_bottom = 0.9480001
+offset_left = -4.712002
+offset_top = -77.30408
+offset_right = 203.288
+offset_bottom = 12.695923
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 50
+icon = ExtResource("3_kftxf")
+flat = true
+
+[node name="creditos" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.97400004
+anchor_top = 0.9480001
+anchor_right = 0.97400004
+anchor_bottom = 0.9480001
+offset_left = -203.0481
+offset_top = -87.30408
+offset_right = 4.9519043
+offset_bottom = 5.695923
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 50
+icon = ExtResource("4_663nc")
+flat = true
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505
+anchor_top = 0.56700003
+anchor_right = 0.505
+anchor_bottom = 0.56700003
+offset_left = -103.76001
+offset_top = -50.416016
+offset_right = 104.23999
+offset_bottom = 50.583984
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 50
+icon = ExtResource("5_kftxf")
+flat = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.90700006
+anchor_top = 0.058000002
+anchor_right = 0.90700006
+anchor_bottom = 0.058000002
+offset_left = -376.864
+offset_top = -16.584
+offset_right = 38.135986
+offset_bottom = 205.416
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9411765, 0.91764706, 0.8392157, 1)
+theme_override_colors/font_shadow_color = Color(0.8019776, 0.36903962, 0.3326999, 1)
+theme_override_fonts/font = ExtResource("6_663nc")
+theme_override_font_sizes/font_size = 71
+text = "LEYENDAS 
+DE MI 
+MEXICO"
+
+[connection signal="pressed" from="contrato" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="creditos" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

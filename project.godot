@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="project-videogames-car"
+run/main_scene="uid://526dslf1ee0p"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"

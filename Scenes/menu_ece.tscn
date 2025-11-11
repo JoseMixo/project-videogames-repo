@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://cboce1habi1ao"]
+
+[ext_resource type="Texture2D" uid="uid://dwlr2bt84v45c" path="res://imagenes/portada_definitiva.png" id="1_ietsa"]
+
+[node name="menu_ece" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.99000007
+anchor_bottom = 0.98300004
+offset_right = 11.519897
+offset_bottom = 11.015991
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.15780687, 0.16006127, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ietsa")
+expand_mode = 1
+
+[node name="opciones" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = -14.0
+offset_right = 203.20801
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 50
+text = "OPCIONES"
+
+[node name="salir" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -162.0
+offset_top = 81.0
+offset_right = 207.20801
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 50
+text = "SALIR"
+
+[node name="Play" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.51500005
+anchor_top = 0.55200005
+anchor_right = 0.51500005
+anchor_bottom = 0.55200005
+offset_left = -184.28003
+offset_top = -142.69604
+offset_right = 184.92798
+offset_bottom = -65.696045
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 50
+text = "JUGAR"

@@ -1,0 +1,129 @@
+[gd_scene load_steps=7 format=3 uid="uid://526dslf1ee0p"]
+
+[ext_resource type="Script" uid="uid://kfofmp23xy3a" path="res://Scripts/menu.gd" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://dwlr2bt84v45c" path="res://imagenes/portada_definitiva.png" id="2_xhh6f"]
+[ext_resource type="FontFile" uid="uid://droxmli3wsahx" path="res://resourse_letras/CFMexicanaPERSONALUSE-Regul.ttf" id="3_jsrd8"]
+[ext_resource type="Texture2D" uid="uid://cvorqtjp03wcg" path="res://imagenes/opciones_naranja.png" id="3_wwsa2"]
+[ext_resource type="Texture2D" uid="uid://bmya0wyp5krx6" path="res://imagenes/español_nue/buton_salir.png" id="5_jsrd8"]
+[ext_resource type="Texture2D" uid="uid://bjeq0gfjay5j8" path="res://imagenes/español_nue/buton_jugar.png" id="6_jsrd8"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ouk20")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.99000007
+anchor_bottom = 0.98300004
+offset_right = 11.519897
+offset_bottom = 11.015991
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.15780687, 0.16006127, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -5.0
+offset_right = 10.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xhh6f")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.90700006
+anchor_top = 0.058000002
+anchor_right = 0.90700006
+anchor_bottom = 0.058000002
+offset_left = -376.864
+offset_top = -16.584
+offset_right = 38.135986
+offset_bottom = 205.416
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9411765, 0.91764706, 0.8392157, 1)
+theme_override_colors/font_shadow_color = Color(0.8019776, 0.36903962, 0.3326999, 1)
+theme_override_fonts/font = ExtResource("3_jsrd8")
+theme_override_font_sizes/font_size = 71
+text = "LEYENDAS 
+DE MI 
+MEXICO"
+
+[node name="opciones" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.078
+anchor_top = 0.91400003
+anchor_right = 0.078
+anchor_bottom = 0.91400003
+offset_left = -81.856
+offset_top = -49.272034
+offset_right = 126.144
+offset_bottom = 48.727966
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 50
+icon = ExtResource("3_wwsa2")
+
+[node name="salir" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.95900005
+anchor_top = 0.93000007
+anchor_right = 0.95900005
+anchor_bottom = 0.93000007
+offset_left = -183.76807
+offset_top = -68.640015
+offset_right = 24.231934
+offset_bottom = 30.359985
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 50
+icon = ExtResource("5_jsrd8")
+
+[node name="Play" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(0.1, 0)
+anchors_preset = -1
+anchor_left = 0.588
+anchor_top = 0.5
+anchor_right = 0.588
+anchor_bottom = 0.5
+offset_left = -208.37598
+offset_top = -2.0
+offset_right = -0.37597656
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 50
+button_mask = 3
+icon = ExtResource("6_jsrd8")
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="CanvasLayer/salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
